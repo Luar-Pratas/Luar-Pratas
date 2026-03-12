@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luar Pratas - Catálogo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topo">
+
+<div class="logo">Luar Pratas</div>
+
+<div class="pesquisa">
+<input type="text" id="pesquisa" placeholder="Pesquisar joia..." onkeyup="pesquisar()">
+</div>
+
+<div class="carrinho-icon" onclick="abrirCarrinho()">
+🛒 <span id="contador">0</span>
+</div>
+
+</header>
+
+<nav class="categorias">
+
+<button onclick="filtrar('brinco')">Brincos</button>
+<button onclick="filtrar('colar')">Colares</button>
+<button onclick="filtrar('pulseira')">Pulseiras</button>
+<button onclick="filtrar('anel')">Anéis</button>
+<button onclick="filtrar('pingente')">Pingentes</button>
+<button onclick="filtrar('personalizado')">Personalizados</button>
+<button onclick="filtrar('masculino')">Linha Masculina</button>
+<button onclick="filtrar('todos')">Todos</button>
+
+</nav>
+
+<div class="grade-produtos" id="produtos"></div>
+
+<div class="carrinho-lateral" id="carrinho">
+
+<h2>Seu Carrinho</h2>
+
+<div id="listaCarrinho"></div>
+
+<hr>
+
+<p id="total">Total: R$ 0</p>
+
+<button class="btn-enviar" onclick="enviarWhats()">Enviar Pedido no WhatsApp</button>
+
+<button class="btn-fechar" onclick="fecharCarrinho()">Fechar</button>
+
+</div>
+
+<script src="carrinho.js"></script>
+
+</body>
+</html>

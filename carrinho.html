@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Carrinho</title>
+</head>
+
+<body>
+
+<h1>Seu Carrinho</h1>
+
+<div id="lista"></div>
+
+<script>
+
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
+
+let lista = document.getElementById("lista")
+
+carrinho.forEach(produto => {
+
+lista.innerHTML += `
+<p>${produto.nome} - R$ ${produto.preco}</p>
+`
+
+})
+
+</script>
+
+</body>
+
+</html>
+
+<script src="carrinho.js"></script>
